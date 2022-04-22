@@ -34,21 +34,17 @@ function horaActual() {
     
    //Gatillo la alarma
     if (hora == this.horaD && minuto == this.minutoD && segundo == 00) {
-        //despliego en una ventana video de youtube
-		var audio = new Audio("assets/others/alarm.mp3");
+        //inicializo una variable de audio
+		var audio = new Audio("https://quz1yp-a.akamaihd.net/downloads/ringtones/files/mp3/undertaker-r-1884.mp3");
 		audio.play();
-        window.open("https://youtu.be/jya2eBCDcW0&autoplay=1", "alarma2", "width=400,height=400");
-        //Activo atributos deshabilitados
-        document.getElementById("hora").removeAttribute("hidden");
-        document.getElementById("minuto").removeAttribute("hidden");
-        document.getElementById("inicio").removeAttribute("hidden");
-        document.getElementById("lblHora").removeAttribute("hidden");
-        document.getElementById("lblMinuto").removeAttribute("hidden");
-        //refresco la pagina para que setee los valores nuevamente
-        location.reload();
-    };
+        audio.addEventListener("ended", function(){
+            desplegar();
+          });
+        
+    }
 
   };
+  
   function alerta(){
    //rescato valores de los indicadores
     this.horaD = parseInt(document.getElementById("hora").value);
@@ -68,6 +64,18 @@ function horaActual() {
     document.getElementById("lblHora").setAttribute("hidden", true);
     document.getElementById("lblMinuto").setAttribute("hidden", true); 
   };
+
+  function desplegar(){
+      //Activo atributos deshabilitados
+      document.getElementById("hora").removeAttribute("hidden");
+      document.getElementById("minuto").removeAttribute("hidden");
+      document.getElementById("inicio").removeAttribute("hidden");
+      document.getElementById("lblHora").removeAttribute("hidden");
+      document.getElementById("lblMinuto").removeAttribute("hidden");
+      //refresco la pagina para que setee los valores nuevamente
+      location.reload();
+  
+    };
   //control de visibilidad en la animación del reloj, se actualiza cada 1 segundo el objeto
   setInterval(horaActual,1000);
   /* */
