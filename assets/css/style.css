@@ -6,7 +6,7 @@
 
 body {
   /*background-image: url('https://img.myloview.es/cuadros/papel-torn-con-la-palabra-break-time-en-el-fondo-de-madera-700-118723526.jpg');*/
-  background-image: url("/assets/img/ade5.jpg");
+  background-image: url("assets/img/ade5.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   color: lime;
