@@ -35,7 +35,7 @@ function horaActual() {
    //Gatillo la alarma
     if (hora == this.horaD && minuto == this.minutoD && segundo == 00) {
         //inicializo una variable de audio
-		var audio = new Audio("/assets/others/alarm.mp3");
+		var audio = new Audio("https://github.com/mauricioespinoza/break/blob/main/assets/others/alarm.mp3");
 		audio.play();
         audio.addEventListener("ended", function(){
             desplegar();
