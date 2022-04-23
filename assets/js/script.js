@@ -35,7 +35,7 @@ function horaActual() {
    //Gatillo la alarma
     if (hora == this.horaD && minuto == this.minutoD && segundo == 00) {
         //inicializo una variable de audio
-		var audio = new Audio("https://quz1yp-a.akamaihd.net/downloads/ringtones/files/mp3/undertaker-r-1884.mp3");
+		var audio = new Audio("/assets/others/alarm.mp3");
 		audio.play();
         audio.addEventListener("ended", function(){
             desplegar();
